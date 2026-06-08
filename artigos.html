@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artigos sobre Piscicultura de Tilápia · Peixe Gordo</title>
+<meta name="description" content="Artigos técnicos sobre criação de tilápia, manejo, alimentação e gestão da piscicultura no Brasil. Conteúdo gratuito para produtores rurais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9161081350810467" crossorigin="anonymous"></script>
+<style>
+:root {
+  --bg:#050d1a; --surface:#0c1829; --surface2:#112035; --border:rgba(0,200,180,.12);
+  --border-h:rgba(0,200,180,.35); --accent:#00c8b4; --text:#e2eaf4;
+  --text-muted:#6d8aaa; --text-soft:#a3bcd8; --radius:16px; --radius-lg:22px;
+  --font:'Sora',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;padding:24px 16px 48px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:680px;margin:0 auto}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.nav-logo{font-size:1.1rem;font-weight:700;color:var(--accent);display:flex;align-items:center;gap:8px}
+.nav-links{display:flex;gap:16px}
+.nav-links a{font-size:.8rem;color:var(--text-muted);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--accent);text-decoration:none}
+
+/* PAGE TITLE */
+.page-hero{margin-bottom:32px}
+.page-hero h1{font-size:1.6rem;font-weight:700;margin-bottom:8px}
+.page-hero p{font-size:.88rem;color:var(--text-soft);line-height:1.7}
+
+/* AD */
+.ad-slot{width:100%;margin:20px 0;border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid var(--border);min-height:90px;display:flex;align-items:center;justify-content:center}
+.ad-slot ins{display:block;width:100%}
+
+/* ARTICLE CARDS */
+.articles-grid{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.article-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;transition:border-color .2s}
+.article-card:hover{border-color:var(--border-h)}
+.article-tag{display:inline-block;background:rgba(0,200,180,.1);border:1px solid rgba(0,200,180,.2);border-radius:20px;padding:3px 10px;font-size:.7rem;font-weight:600;color:var(--accent);margin-bottom:10px}
+.article-card h2{font-size:1rem;font-weight:700;margin-bottom:8px;line-height:1.4}
+.article-card h2 a{color:var(--text)}
+.article-card h2 a:hover{color:var(--accent);text-decoration:none}
+.article-card p{font-size:.82rem;color:var(--text-soft);line-height:1.7;margin-bottom:12px}
+.article-meta{font-size:.72rem;color:var(--text-muted)}
+
+/* ARTICLE FULL */
+.article-full{display:none}
+.article-full.show{display:block}
+.articles-list{display:block}
+.articles-list.hide{display:none}
+.back-btn{background:var(--surface2);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:var(--font);font-size:.85rem;padding:8px 14px;cursor:pointer;margin-bottom:24px;transition:background .2s}
+.back-btn:hover{background:#162844}
+.article-full h1{font-size:1.4rem;font-weight:700;margin-bottom:8px;line-height:1.4}
+.article-full .article-meta{font-size:.75rem;color:var(--text-muted);margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.article-full h2{font-size:1rem;font-weight:700;color:var(--accent);margin:24px 0 10px}
+.article-full p{font-size:.85rem;color:var(--text-soft);line-height:1.85;margin-bottom:14px}
+.article-full ul,
+.article-full ol{padding-left:20px;margin-bottom:14px}
+.article-full li{font-size:.85rem;color:var(--text-soft);line-height:1.85;margin-bottom:6px}
+.article-full strong{color:var(--text)}
+.article-full .highlight{background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 16px;margin:16px 0}
+.article-full .highlight p{margin:0;font-size:.83rem}
+
+/* FOOTER */
+.site-footer{border-top:1px solid var(--border);padding:24px 0 12px;margin-top:16px;text-align:center}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+.footer-links a{font-size:.75rem;color:var(--text-muted)}
+.footer-links a:hover{color:var(--accent)}
+.footer-copy{font-size:.7rem;color:var(--text-muted);line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="nav">
+    <div class="nav-logo">🐟 Peixe Gordo</div>
+    <div class="nav-links">
+      <a href="index.html">Calculadora</a>
+      <a href="artigos.html" class="active">Artigos</a>
+      <a href="guia-racao.html">Guia de Ração</a>
+    </div>
+  </nav>
+
+  <!-- ARTICLES LIST -->
+  <div class="articles-list" id="articlesList">
+
+    <div class="page-hero">
+      <h1>Artigos sobre Piscicultura</h1>
+      <p>Conteúdo técnico gratuito para produtores de tilápia e estudantes de aquicultura no Brasil.</p>
+    </div>
+
+    <div class="ad-slot">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9161081350810467" data-ad-slot="4499443395" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="articles-grid">
+
+      <div class="article-card">
+        <span class="article-tag">Alimentação</span>
+        <h2><a href="#" onclick="abrirArtigo('a1');return false;">Como calcular a ração ideal para tilápia: guia completo</a></h2>
+        <p>Entenda como o peso médio, a taxa de arraçoamento e o Fator de Conversão Alimentar (CA) determinam a quantidade exata de ração diária para seu lote de tilápia.</p>
+        <div class="article-meta">📅 Maio 2026 · ⏱ 8 min de leitura</div>
+      </div>
+
+      <div class="article-card">
+        <span class="article-tag">Manejo</span>
+        <h2><a href="#" onclick="abrirArtigo('a2');return false;">Biometria na piscicultura: quando e como fazer</a></h2>
+        <p>A biometria é fundamental para ajustar o arraçoamento e monitorar o crescimento do lote. Aprenda a técnica correta e a frequência ideal para sua criação.</p>
+        <div class="article-meta">📅 Maio 2026 · ⏱ 6 min de leitura</div>
+      </div>
+
+      <div class="article-card">
+        <span class="article-tag">Qualidade da água</span>
+        <h2><a href="#" onclick="abrirArtigo('a3');return false;">Parâmetros de qualidade da água para criação de tilápia</a></h2>
+        <p>Temperatura, oxigênio dissolvido, pH e amônia: saiba quais são os valores ideais e como monitorar a qualidade da água para máxima produtividade.</p>
+        <div class="article-meta">📅 Abril 2026 · ⏱ 7 min de leitura</div>
+      </div>
+
+      <div class="article-card">
+        <span class="article-tag">Rentabilidade</span>
+        <h2><a href="#" onclick="abrirArtigo('a4');return false;">Como calcular o custo de produção na piscicultura de tilápia</a></h2>
+        <p>Ração representa até 70% do custo de produção. Veja como calcular o custo por quilo de peixe produzido e identificar onde reduzir despesas.</p>
+        <div class="article-meta">📅 Abril 2026 · ⏱ 10 min de leitura</div>
+      </div>
+
+      <div class="article-card">
+        <span class="article-tag">Iniciantes</span>
+        <h2><a href="#" onclick="abrirArtigo('a5');return false;">Tilápia do Nilo: tudo que você precisa saber para começar</a></h2>
+        <p>Um guia completo para quem está começando na piscicultura. Desde a escolha do sistema de criação até a primeira despesca, com dicas práticas para o Brasil.</p>
+        <div class="article-meta">📅 Março 2026 · ⏱ 12 min de leitura</div>
+      </div>
+
+    </div><!-- /articles-grid -->
+
+  </div><!-- /articles-list -->
+
+  <!-- ARTICLE FULL VIEWS -->
+  <div class="article-full" id="a1">
+    <button class="back-btn" onclick="voltarLista()">← Voltar aos artigos</button>
+    <span class="article-tag">Alimentação</span>
+    <h1>Como calcular a ração ideal para tilápia: guia completo</h1>
+    <div class="article-meta">📅 Maio 2026 · ⏱ 8 min de leitura · Por equipe Peixe Gordo</div>
+    <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9161081350810467" data-ad-slot="4499443395" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <h2>Por que o cálculo da ração é tão importante?</h2>
+    <p>A ração representa entre <strong>60% e 70% do custo total</strong> de produção na piscicultura de tilápia. Oferecer ração em excesso significa jogar dinheiro fora — o excedente não consumido afunda, se decompõe e piora a qualidade da água. Oferecer de menos compromete o crescimento e aumenta o tempo até a despesca.</p>
+    <p>O equilíbrio ideal passa por um cálculo técnico baseado em três variáveis: o peso médio dos peixes, a quantidade total do lote e o Fator de Conversão Alimentar (CA).</p>
+    <h2>O que é o Fator de Conversão Alimentar (CA)?</h2>
+    <p>O CA indica quantos quilos de ração são necessários para produzir 1 kg de peixe. Um CA de <strong>1,4</strong> — valor típico para tilápia bem manejada — significa que para cada 1 kg de ganho de peso, foram consumidos 1,4 kg de ração.</p>
+    <div class="highlight"><p>🔢 <strong>Fórmula básica:</strong> Ração diária (kg) = Número de peixes × Peso médio (kg) × Taxa de arraçoamento (%) × CA</p></div>
+    <p>A taxa de arraçoamento varia conforme o peso: peixes menores (abaixo de 50g) precisam de 5% a 8% do peso corporal por dia, enquanto peixes maiores (acima de 300g) consomem em torno de 1,5% a 2%.</p>
+    <h2>Tabela de ganho de peso diário (GPD) para tilápia</h2>
+    <p>O GPD representa o crescimento esperado em gramas por peixe por dia, e varia com o peso atual:</p>
+    <ul>
+      <li>Peixes de <strong>5g a 20g</strong>: GPD entre 0,8 e 1,5 g/dia</li>
+      <li>Peixes de <strong>20g a 100g</strong>: GPD entre 1,5 e 3,5 g/dia</li>
+      <li>Peixes de <strong>100g a 300g</strong>: GPD entre 3,5 e 5,0 g/dia</li>
+      <li>Peixes acima de <strong>300g</strong>: GPD entre 5,0 e 7,0 g/dia</li>
+    </ul>
+    <h2>Como fazer a biometria para ajustar o cálculo</h2>
+    <p>O cálculo só é preciso se o peso médio estiver atualizado. Realize biometrias a cada <strong>15 a 30 dias</strong>, pesando uma amostra de pelo menos 30 peixes por viveiro. Calcule a média e atualize os dados na calculadora.</p>
+    <h2>Use a calculadora gratuita</h2>
+    <p>Nossa <a href="index.html">Calculadora de Gestão de Ração</a> realiza todos esses cálculos automaticamente. Basta informar a quantidade de peixes, o peso médio e selecionar o CA do seu sistema.</p>
+  </div>
+
+  <div class="article-full" id="a2">
+    <button class="back-btn" onclick="voltarLista()">← Voltar aos artigos</button>
+    <span class="article-tag">Manejo</span>
+    <h1>Biometria na piscicultura: quando e como fazer</h1>
+    <div class="article-meta">📅 Maio 2026 · ⏱ 6 min de leitura · Por equipe Peixe Gordo</div>
+    <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9161081350810467" data-ad-slot="4499443395" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <h2>O que é biometria na piscicultura?</h2>
+    <p>Biometria é o processo de medir e pesar uma amostra representativa do lote para estimar o peso médio atual dos peixes. É a base de qualquer cálculo de ração e monitoramento de crescimento.</p>
+    <h2>Com que frequência fazer?</h2>
+    <p>A recomendação técnica é realizar biometrias a cada <strong>15 a 30 dias</strong>. Em sistemas intensivos com alta densidade, o intervalo deve ser menor — 15 dias — pois o crescimento é mais rápido e o arraçoamento desatualizado gera mais desperdício.</p>
+    <h2>Como coletar a amostra corretamente</h2>
+    <ul>
+      <li>Realize a biometria <strong>antes do primeiro arraçoamento</strong> do dia, com o estômago vazio</li>
+      <li>Colete no mínimo <strong>30 peixes por viveiro</strong> (10% do lote em lotes menores)</li>
+      <li>Pese individualmente e anote todos os valores</li>
+      <li>Calcule a média aritmética simples</li>
+      <li>Registre também o menor e o maior peso — uma grande variação indica manejo inadequado</li>
+    </ul>
+    <div class="highlight"><p>📊 <strong>Dica:</strong> Se o desvio padrão do peso for maior que 30% da média, revise a densidade de estocagem e a uniformidade do arraçoamento.</p></div>
+    <h2>Uniformidade do lote</h2>
+    <p>Lotes uniformes são mais rentáveis. Peixes maiores competem por ração com os menores, aumentando a variação de peso ao longo do ciclo. Realize <strong>seleção e classificação</strong> dos peixes a cada 60 dias para separar tamanhos e melhorar a uniformidade.</p>
+    <h2>Registre os dados</h2>
+    <p>Mantenha um caderno ou planilha com data, peso médio, quantidade estimada e CA calculado. Esses dados permitem comparar ciclos e identificar problemas de desempenho com antecedência.</p>
+  </div>
+
+  <div class="article-full" id="a3">
+    <button class="back-btn" onclick="voltarLista()">← Voltar aos artigos</button>
+    <span class="article-tag">Qualidade da água</span>
+    <h1>Parâmetros de qualidade da água para criação de tilápia</h1>
+    <div class="article-meta">📅 Abril 2026 · ⏱ 7 min de leitura · Por equipe Peixe Gordo</div>
+    <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9161081350810467" data-ad-slot="4499443395" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <h2>Por que a qualidade da água é tão importante?</h2>
+    <p>A tilápia é resistente, mas produz bem apenas dentro de faixas específicas de qualidade da água. Fora desses limites, o consumo de ração cai, o crescimento desacelera e os peixes ficam mais suscetíveis a doenças.</p>
+    <h2>Temperatura</h2>
+    <p>A faixa ideal é entre <strong>26°C e 30°C</strong>. Abaixo de 20°C o metabolismo cai drasticamente e a tilápia praticamente para de se alimentar. Acima de 32°C há estresse térmico. No Nordeste brasileiro, as temperaturas elevadas durante o verão são favoráveis — mas exigem atenção ao oxigênio.</p>
+    <h2>Oxigênio Dissolvido (OD)</h2>
+    <p>Mantenha acima de <strong>5 mg/L</strong>. Abaixo de 3 mg/L há estresse severo e risco de mortalidade. Em sistemas de alta densidade, aeradores são indispensáveis — especialmente ao amanhecer, quando o OD atinge o valor mínimo diário.</p>
+    <h2>pH</h2>
+    <p>A faixa ideal é entre <strong>6,5 e 8,5</strong>. O pH influencia a toxicidade da amônia: em pH alto (acima de 8), mais amônia está na forma tóxica (NH₃). Monitore especialmente em tanques com alta biomassa.</p>
+    <h2>Amônia Total</h2>
+    <p>Deve ficar abaixo de <strong>1 mg/L</strong> de amônia total. O excesso de ração não consumida é a principal fonte de amônia. Calibre o arraçoamento corretamente para evitar acúmulo.</p>
+    <div class="highlight"><p>💧 <strong>Resumo dos parâmetros ideais:</strong> Temperatura 26–30°C · OD > 5 mg/L · pH 6,5–8,5 · Amônia total < 1 mg/L · Transparência 30–40 cm</p></div>
+    <h2>Transparência da água (Disco de Secchi)</h2>
+    <p>A transparência entre <strong>30 e 40 cm</strong> indica floração de algas saudável (fitoplâncton), que contribui com oxigênio e serve de alimento complementar para a tilápia. Água muito clara indica baixa produtividade; muito turva indica excesso de matéria orgânica.</p>
+  </div>
+
+  <div class="article-full" id="a4">
+    <button class="back-btn" onclick="voltarLista()">← Voltar aos artigos</button>
+    <span class="article-tag">Rentabilidade</span>
+    <h1>Como calcular o custo de produção na piscicultura de tilápia</h1>
+    <div class="article-meta">📅 Abril 2026 · ⏱ 10 min de leitura · Por equipe Peixe Gordo</div>
+    <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9161081350810467" data-ad-slot="4499443395" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <h2>Estrutura de custos na piscicultura</h2>
+    <p>Conhecer os custos de produção é fundamental para saber se a atividade é lucrativa e onde há margem para melhoria. Na piscicultura de tilápia, os custos se dividem em fixos e variáveis.</p>
+    <h2>Custos variáveis (por ciclo)</h2>
+    <ul>
+      <li><strong>Ração</strong>: representa 60% a 70% do custo total</li>
+      <li><strong>Alevinos</strong>: em torno de 5% a 10%</li>
+      <li><strong>Energia elétrica</strong> (aeração, bombeamento): 3% a 8%</li>
+      <li><strong>Mão de obra</strong>: 10% a 15%</li>
+      <li><strong>Medicamentos e insumos</strong>: 2% a 5%</li>
+    </ul>
+    <h2>Custo por quilo produzido</h2>
+    <div class="highlight"><p>💰 <strong>Fórmula:</strong> Custo por kg = Custo total do ciclo ÷ Total de kg produzidos (biomassa final − mortalidade)</p></div>
+    <p>Para uma criação eficiente no Brasil, o custo de produção da tilápia fica entre <strong>R$ 4,50 e R$ 6,50 por kg</strong>, dependendo do sistema (extensivo, semi-intensivo ou intensivo), preço da ração e custo da mão de obra local.</p>
+    <h2>Como reduzir o custo de produção</h2>
+    <ul>
+      <li>Melhore o CA: cada décimo reduzido representa economia significativa em ração</li>
+      <li>Use ração de qualidade adequada ao tamanho do peixe</li>
+      <li>Faça biometrias frequentes para não super ou subalimentar</li>
+      <li>Reduza a mortalidade com bom manejo sanitário e qualidade da água</li>
+      <li>Compre ração em volume — negociar com cooperativas reduz o preço por saco</li>
+    </ul>
+    <h2>Preço de venda e lucratividade</h2>
+    <p>O preço de venda da tilápia inteira no Brasil varia entre <strong>R$ 7,00 e R$ 12,00/kg</strong> dependendo da região e do canal de venda (atravessador, direto ao varejo, restaurantes ou frigoríficos). A venda direta ao consumidor final tende a ser a mais rentável.</p>
+  </div>
+
+  <div class="article-full" id="a5">
+    <button class="back-btn" onclick="voltarLista()">← Voltar aos artigos</button>
+    <span class="article-tag">Iniciantes</span>
+    <h1>Tilápia do Nilo: tudo que você precisa saber para começar</h1>
+    <div class="article-meta">📅 Março 2026 · ⏱ 12 min de leitura · Por equipe Peixe Gordo</div>
+    <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9161081350810467" data-ad-slot="4499443395" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <h2>Por que criar tilápia no Brasil?</h2>
+    <p>A tilápia do Nilo (<em>Oreochromis niloticus</em>) é a espécie mais cultivada no Brasil e a segunda mais produzida no mundo. Sua popularidade se deve à <strong>rusticidade, crescimento rápido, aceitação de ração artificial e excelente sabor</strong>. O ciclo de produção até o peso de abate (600g a 800g) dura em média 6 a 8 meses.</p>
+    <h2>Sistemas de criação</h2>
+    <ul>
+      <li><strong>Viveiros escavados</strong>: baixo custo de implantação, ideal para propriedades rurais com disponibilidade de água e área</li>
+      <li><strong>Tanques-rede</strong>: instalados em reservatórios e represas, permitem alta densidade com menor área física</li>
+      <li><strong>Sistemas de recirculação (RAS)</strong>: alto investimento, mas máximo controle e produtividade por m²</li>
+    </ul>
+    <h2>Escolha dos alevinos</h2>
+    <p>Use sempre alevinos <strong>revertidos sexualmente</strong> (machos). Machos crescem até 40% mais rápido que fêmeas. A reversão é feita com hormônio (17α-metiltestosterona) nas primeiras semanas de vida em piscicultura certificada. Exija certificado de origem e sanidade dos alevinos.</p>
+    <h2>Densidade de estocagem</h2>
+    <p>Em viveiros semi-intensivos, a densidade recomendada é de <strong>1 a 3 peixes por m²</strong>. Em tanques-rede intensivos, pode chegar a 100 kg/m³ com aeração adequada. Superlotação aumenta o estresse, piora a qualidade da água e reduz o crescimento.</p>
+    <h2>Alimentação</h2>
+    <p>A tilápia é onívora e aceita bem rações comerciais extrusadas. Use ração com <strong>28% a 32% de proteína bruta</strong> para peixes em crescimento, e <strong>24% a 28%</strong> para a fase de engorda. O arraçoamento deve ser feito 2 a 3 vezes ao dia, preferencialmente nos horários de maior atividade (manhã e tarde).</p>
+    <div class="highlight"><p>🎯 <strong>Use nossa <a href="index.html">Calculadora de Ração</a></strong> para saber exatamente quanto fornecer a cada fase do ciclo.</p></div>
+    <h2>Primeira despesca</h2>
+    <p>A despesca é feita quando os peixes atingem o peso de abate desejado pelo mercado local — geralmente entre <strong>600g e 800g para inteiros</strong>, ou acima de 1 kg para filé. Realize a despesca de madrugada ou ao amanhecer, quando a temperatura é mais baixa e o estresse é menor.</p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">Calculadora</a>
+      <a href="artigos.html">Artigos</a>
+      <a href="guia-racao.html">Guia de Ração</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+    </div>
+    <p class="footer-copy">© 2026 Peixe Gordo · Piscicultura de Tilápia no Brasil 🇧🇷</p>
+  </footer>
+
+</div><!-- /wrap -->
+<script>
+function abrirArtigo(id) {
+  document.getElementById('articlesList').classList.add('hide');
+  document.querySelectorAll('.article-full').forEach(el => el.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+  window.scrollTo(0,0);
+}
+function voltarLista() {
+  document.querySelectorAll('.article-full').forEach(el => el.classList.remove('show'));
+  document.getElementById('articlesList').classList.remove('hide');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
