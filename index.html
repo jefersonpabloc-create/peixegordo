@@ -853,8 +853,8 @@ input[type=number] { -moz-appearance: textfield; }
 
   <div class="info-card">
     <h2>🐟 O que é o Gestão de Ração?</h2>
-    <p>O <strong>Gestão de Ração para Tilápia</strong> é uma calculadora gratuita desenvolvida para piscicultores, estudantes de aquicultura e produtores rurais que criam tilápia em viveiros, tanques-rede ou sistemas de recirculação.</p>
-    <p>Com base no peso médio dos peixes, quantidade do lote e Fator de Conversão Alimentar (CA), o aplicativo calcula automaticamente a quantidade diária de ração necessária, evitando desperdícios e melhorando a eficiência produtiva.</p>
+    <p>O <strong>Gestão de Ração para Tilápia</strong> é uma calculadora gratuita desenvolvida para piscicultores, estudantes de aquicultura e produtores rurais que criam tilápia em viveiros.</p>
+    <p>Com base no peso médio dos peixes, quantidade do lote e Fator de Conversão Alimentar (CA), o aplicativo calcula automaticamente a quantidade diária de ração necessária, evitando desperdícios e otimizando custos.</p>
   </div>
 
   <div class="info-card">
@@ -870,7 +870,7 @@ input[type=number] { -moz-appearance: textfield; }
 
   <div class="info-card">
     <h2>📊 Entendendo o CA (Fator de Conversão Alimentar)</h2>
-    <p>O CA indica quantos quilos de ração são necessários para produzir 1 kg de peixe. Um CA de <strong>1.4</strong> significa que são necessários 1,4 kg de ração para cada 1 kg de ganho de peso — valor típico para tilápia em boas condições.</p>
+    <p>O CA indica quantos quilos de ração são necessários para produzir 1 kg de peixe. Um CA de <strong>1.4</strong> significa que são necessários 1,4 kg de ração para cada 1 kg de ganho de peso.</p>
     <p>Fatores como qualidade da ração, temperatura da água, densidade de estocagem e manejo afetam diretamente o CA. Monitore regularmente para ajustar o arraçoamento.</p>
   </div>
 
@@ -914,13 +914,13 @@ input[type=number] { -moz-appearance: textfield; }
       <p>Ferramenta gratuita desenvolvida para auxiliar piscicultores no cálculo preciso da ração diária para criação de tilápia (<em>Oreochromis niloticus</em>), uma das espécies mais cultivadas no Brasil.</p>
 
       <h3>Objetivo</h3>
-      <p>Reduzir o desperdício de ração, aumentar a eficiência alimentar e melhorar a rentabilidade da piscicultura por meio de cálculos baseados em tabelas de ganho de peso diário (GPD) e no Fator de Conversão Alimentar (CA).</p>
+      <p>Reduzir o desperdício de ração, aumentar a eficiência alimentar e melhorar a rentabilidade da piscicultura por meio de cálculos baseados em tabelas de ganho de peso diário (GPD) e índices de conversão alimentar.</p>
 
       <h3>Metodologia</h3>
-      <p>Os cálculos são baseados em tabelas de GPD (Ganho de Peso Diário) amplamente utilizadas na aquicultura brasileira, adaptadas para diferentes faixas de peso e condições de criação. Os valores são referências técnicas — ajuste sempre conforme as condições reais do seu sistema produtivo.</p>
+      <p>Os cálculos são baseados em tabelas de GPD (Ganho de Peso Diário) amplamente utilizadas na aquicultura brasileira, adaptadas para diferentes faixas de peso e condições de criação.</p>
 
       <h3>Responsabilidade</h3>
-      <p>Este aplicativo fornece estimativas técnicas para fins de apoio ao produtor. Os resultados devem ser interpretados por profissional habilitado. O desenvolvedor não se responsabiliza por decisões de manejo baseadas exclusivamente nos dados calculados.</p>
+      <p>Este aplicativo fornece estimativas técnicas para fins de apoio ao produtor. Os resultados devem ser interpretados por profissional habilitado. O desenvolvedor não se responsabiliza por perdas financeiras ou produtivas decorrentes do uso inadequado.</p>
 
       <h3>Contato</h3>
       <p>Sugestões, dúvidas ou problemas: <strong>contato@peixegordo.vercel.app</strong></p>
@@ -942,13 +942,13 @@ input[type=number] { -moz-appearance: textfield; }
       <p>Este site não coleta dados pessoais diretamente. Não exigimos cadastro, login ou fornecimento de informações pessoais para usar a calculadora.</p>
 
       <h3>2. Cookies e publicidade</h3>
-      <p>Utilizamos o <strong>Google AdSense</strong> para exibir anúncios. O Google pode usar cookies para exibir anúncios relevantes com base nas suas visitas a este e a outros sites. Você pode optar por não usar o cookie do DoubleClick acessando as <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener" style="color:var(--accent)">Configurações de anúncios do Google</a>.</p>
+      <p>Utilizamos o <strong>Google AdSense</strong> para exibir anúncios. O Google pode usar cookies para exibir anúncios relevantes com base nas suas visitas a este e a outros sites. Você pode desativar cookies de publicidade personalizada nas suas configurações.</p>
 
       <h3>3. Google Analytics</h3>
       <p>Podemos utilizar o Google Analytics para análise de tráfego anônimo. Nenhum dado pessoal identificável é coletado por esta ferramenta neste site.</p>
 
       <h3>4. Dados de terceiros</h3>
-      <p>Redes de publicidade de terceiros, incluindo o Google, usam cookies para veicular anúncios com base nas visitas anteriores do usuário ao nosso site ou a outros sites. O uso de cookies de publicidade pelo Google permite que ele e seus parceiros veiculem anúncios para seus usuários com base na visita deles a seus sites e/ou a outros sites na Internet.</p>
+      <p>Redes de publicidade de terceiros, incluindo o Google, usam cookies para veicular anúncios com base nas visitas anteriores do usuário ao nosso site ou a outros sites. O uso de cookies pode ser controlado por você.</p>
 
       <h3>5. Seus direitos (LGPD)</h3>
       <p>Em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei 13.709/2018), você tem direito a:</p>
@@ -1002,413 +1002,323 @@ input[type=number] { -moz-appearance: textfield; }
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-/* ════════════════════════════════════════════════════════
-   TABELA GPD — ganho de peso diário por faixa (g/peixe/dia)
-   ════════════════════════════════════════════════════════ */
-const tabelaGPD = [
-  { peso:    5, gpd: 0.8 },
-  { peso:   20, gpd: 1.5 },
-  { peso:   50, gpd: 2.5 },
-  { peso:  100, gpd: 3.5 },
-  { peso:  200, gpd: 5.0 },
-  { peso:  300, gpd: 6.0 },
-  { peso:  500, gpd: 7.0 },
-  { peso:  800, gpd: 8.0 },
-  { peso: 1000, gpd: 9.0 },
-  { peso: 1300, gpd: 9.5 },
-];
+// ═════════════════════════════════════════════════════════════════════════════
+// GESTÃO DE RAÇÃO PARA TILÁPIA
+// ═════════════════════════════════════════════════════════════════════════════
 
-/* ─── GPD interpolado ──────────────────────────────────── */
-function obterGPD(pesoG) {
-  if (pesoG <= 0) return 0.6;
-  const last = tabelaGPD[tabelaGPD.length - 1];
-  if (pesoG >= last.peso) return last.gpd;
-  for (let i = 0; i < tabelaGPD.length - 1; i++) {
-    const { peso: p1, gpd: g1 } = tabelaGPD[i];
-    const { peso: p2, gpd: g2 } = tabelaGPD[i + 1];
-    if (pesoG >= p1 && pesoG <= p2) {
-      return +(g1 + (g2 - g1) * (pesoG - p1) / (p2 - p1)).toFixed(2);
-    }
+// DADOS DE REFERÊNCIA
+const tablesData = {
+  gpd: {
+    5: 0.8, 20: 1.5, 50: 2.5, 100: 3.5, 200: 5.0, 400: 6.0, 600: 7.0, 800: 7.5
+  },
+  feedingRate: {
+    5: 0.08, 20: 0.065, 50: 0.045, 100: 0.035, 200: 0.025, 400: 0.018, 600: 0.015, 800: 0.012
   }
-  return 9.0;
-}
+};
 
-/* ─── Tipo de ração por granulometria ─────────────────── */
-const FASES_RACAO = [
-  { limite:   1, label: '🍼 Pó (55% PB)',         key: 'po'   },
-  { limite:   2, label: '⚫ 0.8–1 mm (45% PB)',   key: 'f08'  },
-  { limite:   6, label: '🟤 1.3–1.5 mm (45% PB)', key: 'f13'  },
-  { limite:  15, label: '🟠 1.8–2.3 mm (40% PB)', key: 'f18'  },
-  { limite:  50, label: '🟡 2–3 mm (36% PB)',      key: 'f2'   },
-  { limite: 250, label: '🟢 4–6 mm (32% PB)',      key: 'f4'   },
-  { limite: Infinity, label: '🔵 6–8 mm (32% PB)', key: 'f6'  },
-];
-
-function fasePorPeso(pesoG) {
-  return FASES_RACAO.find(f => pesoG <= f.limite) || FASES_RACAO.at(-1);
-}
-
-/* ─── CA efetivo (<=30g → força 1.0) ──────────────────── */
-function caEfetivo(pesoG, caSelect) {
-  return pesoG <= 30 ? 1.0 : caSelect;
-}
-
-/* ─── Converter kg → descrição de sacos de 25 kg ────────── */
-function kgParaSacos(kg) {
-  if (kg <= 0) return '0 kg';
-  const sacosExatos  = kg / 25;
-  const sacosInteiros = Math.floor(sacosExatos);
-  const restoKg       = +(sacosExatos - sacosInteiros) * 25;
-  const restoFmt      = +restoKg.toFixed(1);
-
-  if (sacosInteiros === 0) return `${restoFmt} kg (< 1 saco)`;
-  if (restoFmt <= 0.1)     return `${sacosInteiros} saco${sacosInteiros !== 1 ? 's' : ''} de 25 kg`;
-  return `${sacosInteiros} saco${sacosInteiros !== 1 ? 's' : ''} + ${restoFmt} kg`;
-}
-
-/* ════════════════════════════════════════════════════════
-   VALIDAÇÃO
-   ════════════════════════════════════════════════════════ */
-function parsePositive(val, label) {
-  const n = parseFloat(val);
-  if (isNaN(n) || n <= 0) return { err: `⚠️ ${label}: valor inválido (deve ser > 0).` };
-  return { val: n };
-}
-
-/* ════════════════════════════════════════════════════════
-   RENDERIZADORES DE RESULTADO
-   ════════════════════════════════════════════════════════ */
-function renderError(msg) {
-  return `<div class="error-msg">❌ ${msg}</div>`;
-}
-
-/* ─── ABA HOJE ─────────────────────────────────────────── */
-function calcularRacaoHoje() {
-  const btn = document.getElementById('btnHoje');
-  btn.disabled = true;
-
-  const qtdR  = parsePositive(document.getElementById('qtdHoje').value,  'Quantidade');
-  const pesoR = parsePositive(document.getElementById('pesoHoje').value,  'Peso médio');
-
-  if (qtdR.err  || pesoR.err) {
-    document.getElementById('resHoje').innerHTML = renderError(qtdR.err || pesoR.err);
-    btn.disabled = false;
-    return;
+function getValueByWeight(weight, table) {
+  const keys = Object.keys(table).map(Number).sort((a, b) => a - b);
+  for (let i = 0; i < keys.length; i++) {
+    if (weight <= keys[i]) return table[keys[i]];
   }
-
-  const qtd   = Math.min(qtdR.val,  500_000);
-  const peso  = Math.min(pesoR.val, 2_500);
-  const caV   = parseFloat(document.getElementById('caSelect').value);
-
-  const gpd            = obterGPD(peso);
-  const ca             = caEfetivo(peso, caV);
-  const ganhoBioKg     = (qtd * gpd) / 1000;
-  const racaoKg        = ganhoBioKg * ca;
-  const biomassaKg     = (qtd * peso) / 1000;
-  const fase           = fasePorPeso(peso);
-  const caRegra        = peso <= 30 ? 'fixo 1.0 (≤ 30 g)' : `selecionado ${caV}`;
-
-  document.getElementById('resHoje').innerHTML = `
-    <div class="metrics-grid">
-      <div class="metric full ok-metric">
-        <div class="metric-label">🍽️ Ração recomendada hoje</div>
-        <div class="metric-value big">${racaoKg.toFixed(2)} kg</div>
-        <div class="metric-sub">${kgParaSacos(racaoKg)}</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">⚖️ Biomassa atual</div>
-        <div class="metric-value">${biomassaKg.toFixed(1)} kg</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">📈 Ganho diário (lote)</div>
-        <div class="metric-value">${ganhoBioKg.toFixed(2)} kg</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">🎯 GPD / peixe</div>
-        <div class="metric-value">${gpd.toFixed(2)} g</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">⚙️ CA aplicado</div>
-        <div class="metric-value">${ca.toFixed(2)}</div>
-        <div class="metric-sub">${caRegra}</div>
-      </div>
-    </div>
-    <div class="metric" style="margin-bottom:10px;">
-      <div class="metric-label">🟢 Tipo de ração</div>
-      <div class="metric-value" style="font-size:1rem;">${fase.label}</div>
-    </div>
-    <div class="note">📌 Divida em 2–3 refeições/dia · Cada saco comercial = 25 kg</div>
-  `;
-  btn.disabled = false;
+  return table[keys[keys.length - 1]];
 }
 
-/* ─── ABA PLANEJAMENTO ─────────────────────────────────── */
-function simularPlanejamento() {
-  const btn = document.getElementById('btnSimular');
-  btn.disabled = true;
-
-  const qtdR      = parsePositive(document.getElementById('qtdPlan').value,       'Quantidade');
-  const paR       = parsePositive(document.getElementById('pesoAtualPlan').value,  'Peso atual');
-  const diasR     = parsePositive(document.getElementById('diasPlan').value,       'Dias');
-  const pfR       = parsePositive(document.getElementById('pesoFinalPlan').value,  'Peso final');
-
-  const earlyErr = qtdR.err || paR.err || diasR.err || pfR.err;
-  if (earlyErr) {
-    document.getElementById('resPlanejamento').innerHTML = renderError(earlyErr);
-    btn.disabled = false;
-    return;
-  }
-  if (pfR.val <= paR.val) {
-    document.getElementById('resPlanejamento').innerHTML = renderError(
-      `Peso final (${pfR.val} g) deve ser maior que o peso atual (${paR.val} g).`
-    );
-    btn.disabled = false;
-    return;
-  }
-  if (diasR.val > 365) {
-    document.getElementById('resPlanejamento').innerHTML = renderError('Máximo de dias: 365.');
-    btn.disabled = false;
-    return;
-  }
-
-  const qtd            = Math.min(qtdR.val,  200_000);
-  const pesoAtual      = Math.min(paR.val,   2_000);
-  const diasMax        = Math.floor(diasR.val);
-  const pesoFinalDes   = Math.min(pfR.val,   2_500);
-  const caV            = parseFloat(document.getElementById('caSelect').value);
-
-  /* Acumulador por fase */
-  const consumo = {};
-  FASES_RACAO.forEach(f => consumo[f.key] = 0);
-
-  let peso        = pesoAtual;
-  let dias        = 0;
-  let racaoTotKg  = 0;
-  let falhou      = false;
-
-  while (peso < pesoFinalDes && dias < diasMax && dias < 800) {
-    const gpd      = obterGPD(peso);
-    if (gpd <= 0.01) break;
-    const ca       = caEfetivo(peso, caV);
-    const bioGain  = (qtd * gpd) / 1000;
-    const racaDia  = bioGain * ca;
-    const fase     = fasePorPeso(peso);
-
-    consumo[fase.key] += racaDia;
-    racaoTotKg        += racaDia;
-    peso              += gpd;
-    dias++;
-    if (gpd < 0.1 && dias > 200) break;
-  }
-
-  if (dias >= diasMax && peso < pesoFinalDes) falhou = true;
-
-  const bioIni      = (qtd * pesoAtual) / 1000;
-  const bioFin      = (qtd * peso)      / 1000;
-  const ganhoTot    = bioFin - bioIni;
-  const caReal      = ganhoTot > 0 ? (racaoTotKg / ganhoTot).toFixed(2) : 'N/A';
-
-  /* Status */
-  const statusOk  = !falhou;
-  const statusTxt = statusOk
-    ? `✅ Meta atingida em ${dias} dia${dias !== 1 ? 's' : ''}!`
-    : `⚠️ Limite de ${dias} dias atingido · Peso máx: ${peso.toFixed(1)} g`;
-
-  /* Fases */
-  let fasesHTML = '';
-  FASES_RACAO.forEach(f => {
-    const kg = consumo[f.key];
-    if (kg < 0.01) return;
-    fasesHTML += `
-      <div class="phase-item">
-        <span class="phase-name">${f.label}</span>
-        <span class="phase-qty">${kg.toFixed(1)} kg</span>
-        <span class="phase-sacos">📦 ${kgParaSacos(kg)}</span>
-      </div>`;
+// ═══════════════════════════════════════════════════════════════════════════
+// TAB MANAGEMENT
+// ═══════════════════════════════════════════════════════════════════════════
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const tabIndex = tab.getAttribute('data-tab');
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const panels = document.querySelectorAll('.tab-panel');
+    panels[tabIndex].classList.add('active');
   });
-
-  document.getElementById('resPlanejamento').innerHTML = `
-    <div class="status-bar ${statusOk ? 'ok' : 'warn'}">${statusTxt}</div>
-
-    <div class="metrics-grid">
-      <div class="metric full ok-metric">
-        <div class="metric-label">🍽️ Ração total do ciclo</div>
-        <div class="metric-value big">${racaoTotKg.toFixed(1)} kg</div>
-        <div class="metric-sub">📦 ${kgParaSacos(racaoTotKg)}</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">📅 Dias simulados</div>
-        <div class="metric-value">${dias}</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">🎯 Peso final atingido</div>
-        <div class="metric-value">${peso.toFixed(1)} g</div>
-        <div class="metric-sub">meta: ${pesoFinalDes} g</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">⚖️ Biomassa inicial</div>
-        <div class="metric-value">${bioIni.toFixed(1)} kg</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">⚖️ Biomassa final</div>
-        <div class="metric-value">${bioFin.toFixed(1)} kg</div>
-        <div class="metric-sub">+${ganhoTot.toFixed(1)} kg</div>
-      </div>
-      <div class="metric full">
-        <div class="metric-label">📊 CA médio real do ciclo</div>
-        <div class="metric-value">${caReal}</div>
-        <div class="metric-sub">Até 30 g → CA fixo 1.0 · Acima → CA ${caV}</div>
-      </div>
-    </div>
-
-    <div class="phases-label">📦 Detalhamento por fase</div>
-    ${fasesHTML || '<div class="error-msg">Nenhum consumo registrado. Verifique os parâmetros.</div>'}
-    <div class="note">🔍 Simulação diária com GPD interpolado · Saco comercial = 25 kg</div>
-  `;
-
-  btn.disabled = false;
-}
-
-/* ════════════════════════════════════════════════════════
-   NAVEGAÇÃO DE PÁGINAS (Sobre / Privacidade)
-   ════════════════════════════════════════════════════════ */
-function abrirPagina(id) {
-  document.getElementById(id).classList.add('show');
-  window.scrollTo(0, 0);
-}
-function fecharPagina(id) {
-  document.getElementById(id).classList.remove('show');
-}
-
-/* ════════════════════════════════════════════════════════
-   TABS
-   ════════════════════════════════════════════════════════ */
-function alternarAba(index) {
-  document.querySelectorAll('.tab').forEach((t, i) => {
-    t.classList.toggle('active', i === index);
-    t.setAttribute('aria-selected', String(i === index));
-  });
-  document.querySelectorAll('.tab-panel').forEach((p, i) => {
-    p.classList.toggle('active', i === index);
-  });
-}
-
-/* ════════════════════════════════════════════════════════
-   REWARDED AD — lógica de gate
-   ════════════════════════════════════════════════════════ */
-const AD_FREE_USES   = 3;   // cálculos grátis antes do anúncio
-const AD_COOLDOWN    = 3;   // cálculos liberados após assistir
-const SKIP_DELAY_MS  = 5000; // tempo mínimo antes de pular (ms)
-const COUNTER_SECS   = 5;   // duração do contador visual
-
-let usesRemaining = AD_FREE_USES;  // usos disponíveis
-let pendingCalcFn = null;           // função de cálculo aguardando
-
-function shouldShowAd() {
-  return usesRemaining <= 0;
-}
-
-function onAdWatched() {
-  usesRemaining = AD_COOLDOWN;
-  closeRewardedModal();
-  if (pendingCalcFn) { pendingCalcFn(); pendingCalcFn = null; }
-}
-
-/* ── Modal ── */
-let countdownTimer = null;
-
-function openRewardedModal(calcFn) {
-  pendingCalcFn = calcFn;
-  const overlay   = document.getElementById('rewardedOverlay');
-  const btnSkip   = document.getElementById('btnSkip');
-  const numEl     = document.getElementById('counterNum');
-  const skipSpan  = document.getElementById('skipCountdown');
-  const circle    = document.getElementById('progressCircle');
-  const circumf   = 188; // 2π×30
-
-  overlay.classList.add('show');
-  btnSkip.disabled = true;
-
-  // Inicia anúncio AdSense (se carregado)
-  try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
-
-  // Contador regressivo
-  let secs = COUNTER_SECS;
-  numEl.textContent = secs;
-  skipSpan.textContent = secs;
-  circle.style.strokeDashoffset = '0';
-
-  clearInterval(countdownTimer);
-  countdownTimer = setInterval(() => {
-    secs--;
-    numEl.textContent  = Math.max(secs, 0);
-    skipSpan.textContent = Math.max(secs, 0);
-    // Progresso do círculo
-    const offset = circumf * (1 - (COUNTER_SECS - secs) / COUNTER_SECS);
-    circle.style.strokeDashoffset = circumf - offset;
-
-    if (secs <= 0) {
-      clearInterval(countdownTimer);
-      btnSkip.disabled = false;
-      btnSkip.textContent = '⏭️ Pular anúncio';
-      // Se AdSense não carregou (dev/localhost), libera direto
-      if (!window.adsbygoogle || window.adsbygoogle.length === 0) {
-        onAdWatched();
-      }
-    }
-  }, 1000);
-}
-
-function closeRewardedModal() {
-  clearInterval(countdownTimer);
-  document.getElementById('rewardedOverlay').classList.remove('show');
-}
-
-/* ── Wrapper dos botões de calcular ── */
-function gatecalc(realFn) {
-  if (shouldShowAd()) {
-    openRewardedModal(realFn);
-  } else {
-    usesRemaining--;
-    realFn();
-  }
-}
-
-/* ════════════════════════════════════════════════════════
-   INIT
-   ════════════════════════════════════════════════════════ */
-document.addEventListener('DOMContentLoaded', () => {
-  /* Tab click */
-  document.querySelectorAll('.tab').forEach((tab, i) =>
-    tab.addEventListener('click', () => alternarAba(i))
-  );
-
-  /* Botões passam pelo gate */
-  document.getElementById('btnHoje').addEventListener('click',
-    () => gatecalc(calcularRacaoHoje));
-  document.getElementById('btnSimular').addEventListener('click',
-    () => gatecalc(simularPlanejamento));
-
-  /* Enter key */
-  const enterMap = {
-    qtdHoje: calcularRacaoHoje, pesoHoje: calcularRacaoHoje,
-    qtdPlan: simularPlanejamento, pesoAtualPlan: simularPlanejamento,
-    diasPlan: simularPlanejamento, pesoFinalPlan: simularPlanejamento,
-  };
-  Object.entries(enterMap).forEach(([id, fn]) => {
-    document.getElementById(id)?.addEventListener('keydown', e => {
-      if (e.key === 'Enter') { e.preventDefault(); gatecalc(fn); }
-    });
-  });
-
-  /* Botão pular */
-  document.getElementById('btnSkip').addEventListener('click', onAdWatched);
-
-  /* Cálculo inicial (gratuito, não consome uso) */
-  calcularRacaoHoje();
 });
 
+// ═══════════════════════════════════════════════════════════════════════════
+// ABA 1: CÁLCULO DO DIA
+// ═══════════════════════════════════════════════════════════════════════════
+document.getElementById('btnHoje').addEventListener('click', () => {
+  const qtd = parseFloat(document.getElementById('qtdHoje').value);
+  const peso = parseFloat(document.getElementById('pesoHoje').value);
+  const ca = parseFloat(document.getElementById('caSelect').value);
+
+  if (!qtd || !peso || !ca) {
+    alert('Preencha todos os campos');
+    return;
+  }
+
+  const biomass = (qtd * peso) / 1000;
+  const feedingRate = getValueByWeight(peso, tablesData.feedingRate);
+  const dailyRacao = biomass * feedingRate;
+  const mealsPerDay = peso < 100 ? 3 : 2;
+  const rationPerMeal = dailyRacao / mealsPerDay;
+  const sacos = Math.ceil(dailyRacao / 25);
+
+  let html = `
+    <div class="card">
+      <div class="status-bar ok">
+        ✅ Cálculo realizado com sucesso
+      </div>
+      
+      <div class="metrics-grid">
+        <div class="metric ok-metric">
+          <div class="metric-label">Biomassa Total</div>
+          <div class="metric-value">${biomass.toFixed(2)}</div>
+          <div class="metric-sub">kg</div>
+        </div>
+        
+        <div class="metric ok-metric">
+          <div class="metric-label">Taxa de Arraçoamento</div>
+          <div class="metric-value">${(feedingRate * 100).toFixed(1)}</div>
+          <div class="metric-sub">% do peso</div>
+        </div>
+        
+        <div class="metric full ok-metric">
+          <div class="metric-label">Ração Diária Necessária</div>
+          <div class="metric-value big">${dailyRacao.toFixed(2)}</div>
+          <div class="metric-sub">kg por dia</div>
+        </div>
+      </div>
+      
+      <div class="phases-label">📊 Distribuição Diária</div>
+      <div class="phase-item">
+        <div class="phase-name">Refeições por dia</div>
+        <div class="phase-qty">${mealsPerDay}x</div>
+      </div>
+      <div class="phase-item">
+        <div class="phase-name">Ração por refeição</div>
+        <div class="phase-qty">${rationPerMeal.toFixed(2)} kg</div>
+        <div class="phase-sacos">${(rationPerMeal / 25 * 100).toFixed(0)}g/saco</div>
+      </div>
+      
+      <div class="phases-label">📦 Sacos de Ração (25kg)</div>
+      <div class="phase-item">
+        <div class="phase-name">Necessário por dia</div>
+        <div class="phase-qty">${sacos} sacos</div>
+      </div>
+      <div class="phase-item">
+        <div class="phase-name">Necessário por semana</div>
+        <div class="phase-qty">${(sacos * 7)} sacos</div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('resHoje').innerHTML = html;
+});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ABA 2: PLANEJAMENTO DE CICLO
+// ═══════════════════════════════════════════════════════════════════════════
+let simulationChart = null;
+
+document.getElementById('btnSimular').addEventListener('click', () => {
+  const qtd = parseFloat(document.getElementById('qtdPlan').value);
+  const pesoAtual = parseFloat(document.getElementById('pesoAtualPlan').value);
+  const pesoFinal = parseFloat(document.getElementById('pesoFinalPlan').value);
+  const dias = parseFloat(document.getElementById('diasPlan').value);
+  const ca = parseFloat(document.getElementById('caSelect').value);
+
+  if (!qtd || !pesoAtual || !pesoFinal || !dias || !ca) {
+    alert('Preencha todos os campos');
+    return;
+  }
+
+  if (pesoAtual >= pesoFinal) {
+    alert('Peso final deve ser maior que o peso atual');
+    return;
+  }
+
+  const simulacao = [];
+  let pesoMedio = pesoAtual;
+  let biomassaTotal = (qtd * pesoMedio) / 1000;
+  let racaoAcumulada = 0;
+  let atingiuMeta = false;
+  let diaMetaAtingida = null;
+
+  for (let dia = 0; dia <= dias; dia++) {
+    if (pesoMedio >= pesoFinal) {
+      atingiuMeta = true;
+      if (!diaMetaAtingida) diaMetaAtingida = dia;
+    }
+
+    const feedingRate = getValueByWeight(pesoMedio, tablesData.feedingRate);
+    const racaoDia = biomassaTotal * feedingRate;
+    racaoAcumulada += racaoDia;
+
+    simulacao.push({
+      dia,
+      pesoMedio: pesoMedio.toFixed(2),
+      biomassa: biomassaTotal.toFixed(2),
+      racaoDia: racaoDia.toFixed(2),
+      racaoAcumulada: racaoAcumulada.toFixed(2)
+    });
+
+    if (dia < dias) {
+      const gpd = getValueByWeight(pesoMedio, tablesData.gpd);
+      pesoMedio += gpd;
+      biomassaTotal = (qtd * pesoMedio) / 1000;
+    }
+  }
+
+  // Renderizar HTML
+  let html = `
+    <div class="card">
+      <div class="status-bar ${atingiuMeta ? 'ok' : 'warn'}">
+        ${atingiuMeta ? '✅ Meta atingida em ' + diaMetaAtingida + ' dias' : '⚠️ Meta não atingida no período'}
+      </div>
+      
+      <div class="metrics-grid">
+        <div class="metric">
+          <div class="metric-label">Peso Final</div>
+          <div class="metric-value">${pesoMedio.toFixed(1)}</div>
+          <div class="metric-sub">g</div>
+        </div>
+        
+        <div class="metric">
+          <div class="metric-label">Ganho Total</div>
+          <div class="metric-value">${(pesoMedio - pesoAtual).toFixed(1)}</div>
+          <div class="metric-sub">g</div>
+        </div>
+        
+        <div class="metric full">
+          <div class="metric-label">Ração Acumulada</div>
+          <div class="metric-value big">${racaoAcumulada.toFixed(1)}</div>
+          <div class="metric-sub">kg no total</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">📈 Gráfico de Desenvolvimento</div>
+      <canvas id="simulChart" style="max-height: 250px;"></canvas>
+    </div>
+
+    <div class="card">
+      <div class="phases-label">📊 Evolução do Lote (primeiros 10 dias e últimos 10)</div>
+  `;
+
+  // Mostrar primeiros 10 dias
+  for (let i = 0; i < Math.min(10, simulacao.length); i++) {
+    const s = simulacao[i];
+    html += `
+      <div class="phase-item">
+        <div class="phase-name">Dia ${s.dia}</div>
+        <div class="phase-qty">${s.pesoMedio}g · ${s.racaoDia}kg/dia</div>
+      </div>
+    `;
+  }
+
+  if (simulacao.length > 20) {
+    html += '<div style="text-align:center;color:var(--text-muted);font-size:.7rem;padding:8px 0">... mais dias ...</div>';
+  }
+
+  // Mostrar últimos 10 dias
+  const inicio = Math.max(10, simulacao.length - 10);
+  for (let i = inicio; i < simulacao.length; i++) {
+    const s = simulacao[i];
+    html += `
+      <div class="phase-item">
+        <div class="phase-name">Dia ${s.dia}</div>
+        <div class="phase-qty">${s.pesoMedio}g · ${s.racaoDia}kg/dia</div>
+      </div>
+    `;
+  }
+
+  html += '</div>';
+  document.getElementById('resPlanejamento').innerHTML = html;
+
+  // Renderizar gráfico
+  setTimeout(() => {
+    const ctx = document.getElementById('simulChart');
+    if (ctx) {
+      if (simulationChart) simulationChart.destroy();
+      
+      simulationChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: simulacao.map(s => 'D' + s.dia),
+          datasets: [{
+            label: 'Peso Médio (g)',
+            data: simulacao.map(s => s.pesoMedio),
+            borderColor: '#00c8b4',
+            backgroundColor: 'rgba(0,200,180,.1)',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.3,
+            pointRadius: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: false,
+              grid: { color: 'rgba(0,200,180,.1)' },
+              ticks: { color: '#6d8aaa', font: { size: 10 } }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#6d8aaa', font: { size: 10 }, maxTicksLimit: 10 }
+            }
+          }
+        }
+      });
+    }
+  }, 100);
+});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// MODAL PAGES
+// ═══════════════════════════════════════════════════════════════════════════
+function abrirPagina(pageId) {
+  document.getElementById(pageId).classList.add('show');
+}
+
+function fecharPagina(pageId) {
+  document.getElementById(pageId).classList.remove('show');
+}
+
+// ═════════════════════════════════════════════════════════════════════════════
+// REWARDED AD COUNTDOWN
+// ═════════════════════════════════════════════════════════════════════════════
+function showRewardedAd() {
+  const overlay = document.getElementById('rewardedOverlay');
+  overlay.classList.add('show');
+  
+  let countdown = 5;
+  const counterNum = document.getElementById('counterNum');
+  const progressCircle = document.getElementById('progressCircle');
+  const btnSkip = document.getElementById('btnSkip');
+
+  const interval = setInterval(() => {
+    countdown--;
+    counterNum.textContent = countdown;
+    const offset = 188 * (countdown / 5);
+    progressCircle.style.strokeDashoffset = offset;
+    document.getElementById('skipCountdown').textContent = countdown;
+
+    if (countdown <= 0) {
+      clearInterval(interval);
+      btnSkip.disabled = false;
+    }
+  }, 1000);
+
+  btnSkip.addEventListener('click', () => {
+    overlay.classList.remove('show');
+    clearInterval(interval);
+  });
+}
 </script>
+
 </body>
 </html>
